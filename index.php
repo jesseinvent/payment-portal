@@ -1,14 +1,14 @@
 <?php
 
 if (isset($_GET['verifyPayment'])) {
-    $paymentRef = $_GET['verifyPayment'];
+    $paymentReference = $_GET['verifyPayment'];
 
     $secretKey = "sk_test_14cbece9c8e5f00175959dd488ddd42c72135fb8";
 
     $userId = explode("_", $_GET['verifyPayment'])[0];
     $amount = 0;
 
-    $url = "https://api.paystack.co/transaction/verify/" . $paymentRef;
+    $url = "https://api.paystack.co/transaction/verify/" . $paymentReference;
 
     $ch = curl_init();
 
