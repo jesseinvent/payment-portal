@@ -46,18 +46,6 @@ if (isset($_GET['verifyPayment'])) {
             if ($result['data']['status'] == "failed") {
                 echo "<h3>Payment Failed</h3>";
             }
-
-            if ($result['data']['status'] == "timeout") {
-                echo "<h3>Payment Timeout</h3>";
-            }
-
-            if ($result['data']['status'] == "reversed") {
-                echo "<h3>Payment Reversed</h3>";
-            }
-
-            if ($result['data']['status'] == "cancelled") {
-                echo "<h3>Payment Cancelled</h3>";
-            }
         }
     }
 }
